@@ -2,7 +2,7 @@
 # KITTI Autonomous Perception Dashboard · v4.0
 
 Cyberpunk temalı 4 panelli otonom araç algılama görselleştirme aracı.  
-Gerçek Velodyne `.bin` dosyası gerekmez — pseudo-LiDAR motoru halkaları ve nokta bulutunu sentetik olarak üretir.
+
 
 ---
 
@@ -67,21 +67,23 @@ KITTI/
 ├── image_2/     ← .png kamera görüntüleri
 ├── label_2/     ← .txt etiket dosyaları
 └── calib/       ← .txt kalibrasyon dosyaları
+└── velodyne/    ←  .bin LİDAR(nokta bulutu) dosyaları
 ```
 
-Uygulamayı açtıktan sonra sol paneldeki **"…"** butonlarıyla bu 3 klasörü seç,  
+Uygulamayı açtıktan sonra sol paneldeki **"…"** butonlarıyla bu 4 klasörü seç,  
 ardından **"◈ VERİ SETİ YÜKLE"** butonuna tıkla.
 
 ---
+
 
 ## 🖥️ Panel Açıklamaları
 
 | Panel | İçerik |
 |-------|--------|
-| **Sol Üst** | Dizin seçimi, frame navigasyonu, nesne listesi, istatistikler |
-| **Sol Alt** | AI karar analizi, vision modu (ısı haritası / segmentasyon), LiDAR halka yoğunluğu |
-| **Sağ Üst** | Kamera görüntüsü + 3D bounding box projeksiyonu (P2 matrisi) |
-| **Sağ Alt** | Kuş bakışı LiDAR görünümü (pseudo nokta bulutu + lazer halkaları) |
+| **Sol Üst** | Veri seti yolları, frame navigasyonu, dinamik nesne listesi ve anlık metrik istatistikler |
+| **Sol Alt** | [SCAN/PLAN/ACT] formatında Yapay Zeka Karar Analizi, vision modları (Isı Haritası / Segmentasyon), BEV renk profili ve LiDAR halka yoğunluğu |
+| **Sağ Üst** | Kamera görüntüsü, tespit edilen nesnelerin sınıflandırılması ve 3D Bounding Box projeksiyonu (P2 Matrisi) |
+| **Sağ Alt** | Kuş bakışı (BEV) gerçek LiDAR nokta bulutu görünümü, Z-Coloring (Yükseklik bazlı renklendirme), nesne vurgulama ve lazer halkaları |
 
 ---
 
