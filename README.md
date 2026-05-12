@@ -6,7 +6,7 @@ Cyberpunk temalı 4 panelli otonom araç algılama görselleştirme aracı.
 
 ---
 
-## 📁 Proje Yapısı
+##  Proje Yapısı
 
 ```
 kitti_dashboard/
@@ -23,7 +23,7 @@ kitti_dashboard/
 
 ---
 
-## ⚙️ Kurulum
+##  Kurulum
 
 ### 1. Repoyu klonla
 ```bash
@@ -49,7 +49,7 @@ pip install -r requirements.txt
 
 ---
 
-## ▶️ Çalıştırma
+##  Çalıştırma
 
 ```bash
 python main.py
@@ -57,7 +57,7 @@ python main.py
 
 ---
 
-## 📂 KITTI Veri Seti
+##  KITTI Veri Seti
 
 [KITTI Vision Benchmark](http://www.cvlibs.net/datasets/kitti/eval_object.php) sayfasından  
 **object detection** veri setini indirin. İhtiyacın olan 3 klasör:
@@ -76,7 +76,7 @@ ardından **"◈ VERİ SETİ YÜKLE"** butonuna tıkla.
 ---
 
 
-## 🖥️ Panel Açıklamaları
+##  Panel Açıklamaları
 
 | Panel | İçerik |
 |-------|--------|
