@@ -9,16 +9,17 @@ Cyberpunk temalı 4 panelli otonom araç algılama görselleştirme aracı.
 ##  Proje Yapısı
 
 ```
-kitti_dashboard/
+DEEP-LEARNING-PROJE/
 │
-├── main.py          ← Buradan çalıştırırsın
+├── main.py          ← Arayüzü başlatan ana yürütülebilir dosya
+├── finetune.py      ← PointPillars Fine-Tuning (Adam Opt, 160 Epoch) eğitim betiği
 ├── dashboard.py     ← Ana pencere (CustomTkinter 4-panel grid)
 ├── config.py        ← Renkler, sabitler, font tanımları
-├── data.py          ← KITTICalib, KITTIObj, KITTIDataset
-├── lidar.py         ← Pseudo-LiDAR nokta bulutu + lazer halkaları
-├── rendering.py     ← 3D BBox çizimi, BEVRenderer, CameraRenderer
-├── ai_engine.py     ← Yapay zeka karar metni üreticisi
-└── requirements.txt
+├── data.py          ← KITTICalib, KITTIObj, KITTIDataset sınıfları
+├── lidar.py         ← LiDAR nokta bulutu ve Z-Coloring işlemleri
+├── rendering.py     ← 3D Bounding Box projeksiyonu ve BEV/Camera Render motoru
+├── ai_engine.py     ← Kural tabanlı otonom karar ve eylem metni üreticisi
+└── requirements.txt ← Proje bağımlılıkları
 ```
 
 ---
@@ -27,8 +28,8 @@ kitti_dashboard/
 
 ### 1. Repoyu klonla
 ```bash
-git clone https://github.com/KULLANICI_ADIN/kitti-dashboard.git
-cd kitti-dashboard
+git clone [https://github.com/------/DEEP-LEARNING-PROJE.git](https://github.com/-------/DEEP-LEARNING-PROJE.git)
+cd DEEP-LEARNING-PROJE
 ```
 
 ### 2. Sanal ortam oluştur (önerilir)
@@ -80,10 +81,10 @@ ardından **"◈ VERİ SETİ YÜKLE"** butonuna tıkla.
 
 | Panel | İçerik |
 |-------|--------|
-| **Sol Üst** | Veri seti yolları, frame navigasyonu, dinamik nesne listesi ve anlık metrik istatistikler |
-| **Sol Alt** | [SCAN/PLAN/ACT] formatında Yapay Zeka Karar Analizi, vision modları (Isı Haritası / Segmentasyon), BEV renk profili ve LiDAR halka yoğunluğu |
-| **Sağ Üst** | Kamera görüntüsü, tespit edilen nesnelerin sınıflandırılması ve 3D Bounding Box projeksiyonu (P2 Matrisi) |
-| **Sağ Alt** | Kuş bakışı (BEV) gerçek LiDAR nokta bulutu görünümü, Z-Coloring (Yükseklik bazlı renklendirme), nesne vurgulama ve lazer halkaları |
+| **Sol Üst** | Veri seti yolları, frame geçişleri, dinamik nesne listesi ve tespit edilen anlık metrik istatistikler. |
+| **Sol Alt** | [SCAN/PLAN/ACT] formatında Yapay Zeka Karar Analizi, güvenli takip mesafesi uyarıları ve otonom müdahale logları. |
+| **Sağ Üst** | Orijinal kamera görüntüsü üzerine kalibrasyon matrisleriyle (P2) izdüşümü alınmış tespit edilen nesneler ve 3D Bounding Box projeksiyonları. |
+| **Sağ Alt** | Kuş bakışı (Bird's Eye View) gerçek LiDAR nokta bulutu görünümü, Z-Coloring (Yükseklik bazlı renklendirme) ve nesne vurgulama. |
 
 ---
 
