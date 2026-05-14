@@ -1,8 +1,8 @@
 # DEEP-LEARNING-PROJE
 # KITTI Autonomous Perception Dashboard · v4.0
-
+NASIL 
 Cyberpunk temalı 4 panelli otonom araç algılama görselleştirme aracı.  
-
+2026-05-14 11-07-40.mp4 Videomuz ile projemizin nasıl çalıştığının görüntülerini bulabilirsiniz.
 
 ---
 
